@@ -1,0 +1,4 @@
+> 40 N N 36 oznaczenie stê¿enia cholesterolu
+> 15 N N 1 samobadanie j¹der
+> 40 N N 36 badanie per rectum u internisty
+> 40 N N 36 PSA ca³kowity i wolny

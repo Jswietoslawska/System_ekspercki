@@ -1,0 +1,69 @@
+m = 0 N N 0 szczepienie przeciw gruŸlicy
+m = 0 N N 0 szczepienie przeciw WZW typu B
+m = 1 N N 0 szczepienie przeciw WZW typu B (druga dawka)
+m = 1 N N 0 szczepienie przeciw b³onicy
+m = 1 N N 0 szczepienie przeciw tê¿cowi
+m = 1 N N 0 szczepienie przeciw krztuœcowi
+m = 1 N N 0 szczepienie przeciw inwazyjnym zaka¿eniom haemophilus influenzae
+m = 1 N N 0 szczepienie przeciw inwazyjnym zaka¿eniom streptococcus pneumoniae
+m - 1 6 N N 0 badanie bilans zdrowia
+m = 3 N N 0 szczepienie przeciw b³onicy (druga dawka)
+m = 3 N N 0 szczepienie przeciw tê¿cowi (druga dawka)
+m = 3 N N 0 szczepienie przeciw krztuœcowi (druga dawka)
+m = 3 N N 0 szczepienie przeciw inwazyjnym zaka¿eniom haemophilus influenzae (druga dawka)
+m = 3 N N 0 szczepienie przeciw inwazyjnym zaka¿eniom streptococcus pneumoniae (druga dawka)
+m = 3 N N 0 szczepienie przeciw ostremu nagminnemu pora¿eniu dzieciêcemu
+m - 4 5 N N 0 szczepienie przeciw b³onicy (trzecia dawka)
+m - 4 5 N N 0 szczepienie przeciw tê¿cowi (trzecia dawka)
+m - 4 5 N N 0 szczepienie przeciw krztuœcowi (trzecia dawka)
+m - 4 5 N N 0 szczepienie przeciw inwazyjnym zaka¿eniom haemophilus influenzae (trzecia dawka)
+m - 4 5 N N 0 szczepienie przeciw ostremu nagminnemu pora¿eniu dzieciêcemu (druga dawka)
+m = 6 N N 0 szczepienie przeciw WZW typu B (trzecia dawka)
+m - 12 14 N N 0 szczepienie przeciw odrze
+m - 12 14 N N 0 szczepienie przeciw œwince
+m - 12 14 N N 0 szczepienie przeciw ró¿yczce
+m - 12 14 N N 0 szczepienie przeciw inwazyjnym zaka¿eniom streptococcus pneumoniae (trzecia dawka)
+m - 15 17 N N 0 szczepienie przeciw b³onicy (czwarta dawka)
+m - 15 17 N N 0 szczepienie przeciw tê¿cowi (czwarta dawka)
+m - 15 17 N N 0 szczepienie przeciw krztuœcowi (czwarta dawka)
+m - 15 17 N N 0 szczepienie przeciw inwazyjnym zaka¿eniom haemophilus influenzae (czwarta dawka)
+m - 15 17 N N 0 szczepienie przeciw ostremu nagminnemu pora¿eniu dzieciêcemu (trzecia dawka)
+= 5 N N 0 szczepienie przeciw b³onicy (pierwsza dawka przypominaj¹ca)
+= 5 N N 0 szczepienie przeciw tê¿cowi (pierwsza dawka przypominaj¹ca)
+= 5 N N 0 szczepienie przeciw krztuœcowi (pierwsza dawka przypominaj¹ca)
+= 5 N N 0 szczepienie przypominaj¹ce przeciw ostremu nagminnemu pora¿eniu dzieciêcemu
+= 9 N N 0 szczepienie przypominaj¹ce przeciw odrze
+= 9 N N 0 szczepienie przypominaj¹ce przeciw ró¿yczce
+= 9 N N 0 szczepienie przypominaj¹ce przeciw œwince
+= 13 N N 0 szczepienie przeciw b³onicy (druga dawka przypominaj¹ca)
+= 13 N N 0 szczepienie przeciw tê¿cowi (druga dawka przypominaj¹ca)
+= 13 N N 0 szczepienie przeciw krztuœcowi (druga dawka przypominaj¹ca)
+= 18 N N 0 szczepienie przeciw b³onicy (trzecia dawka przypominaj¹ca)
+= 18 N N 0 szczepienie przeciw tê¿cowi (trzecia dawka przypominaj¹ca)
+= 18 N N 0 szczepienie przeciw krztuœcowi (trzecia dawka przypominaj¹ca)
+- 0 5 R uraz lub wada oœrodkowego uk³adu nerwowego przebiegaj¹ca z wyciekiem p³ynu mózgowo-rdzeniowego#zaka¿enie HIV#stan po przeszczepieniu szpiku#stan przed lub po przeszczepieniu narz¹dów wewnêtrznych#stan przed lub po wszczepieniu implantu œlimakowego#przewlek³e choroby serca#schorzenia immunologiczno-hematologiczne#asplenia wrodzona#dysfunkcja œledziony#stan po splenektomii lub po leczeniu immunosupresyjnym#przewlek³a niewydolnoœæ nerek i nawracaj¹cy zespó³ nerczycowy#pierwotne zaburzenia odpornoœci#choroby metaboliczne#przewlek³e choroby p³uc#%# N 0 szczepienie przeciw inwazyjnym zaka¿eniom streptococcus pneumoniae
+- 0 11 R upoœledzenie odpornoœci o wysokim ryzyku ciê¿kiego przebiegu choroby#ostra bia³aczka limfoblastyczna w okresie remisji#zaka¿enie HIV#stan przed leczeniem immunosupresyjnym lub chemioterapi¹#%# N 0 szczepienie przeciw ospie wietrznej
+- 0 11 R nieprzebyta ospa wietrzna, a w otoczeniu znajduj¹ siê osoby z upoœledzeniem odpornoœci/ ostr¹ bia³aczk¹ limfoblastyczn¹/ zaka¿one HIV/ przed leczeniem immunosupersyjnym lub chemioterapi¹#%# N 0 szczepienie przeciw ospie wietrznej
+- 0 11 R przebywanie w zak³adach pielêgnacyjno-opiekuñczych#przebywanie w zak³adach opiekuñczo-leczniczych#przebywanie w rodzinnych domach dziecka#przebywanie w domach dla matek z ma³oletnimi dzieæmi i kobiet w ci¹¿y#przebywanie w domach pomocy spo³ecznej#przebywanie w placówkach opiekuñczo-wychowawczych#przebywanie w regionalnych placówkach opiekuñczo-terapeutycznych#przebywanie w interewncyjnych oœrodkach preadopcyjnych#przebywanie w z³obkach lub klubikach dzieciêcych#%# N 0 szczepienie przeciw ospie wietrznej
+- 50 65 N N 120 badanie kolonoskopii
+- 40 65 R zdiagnozowany rak jelita grubego u krewnego pierwszego stopnia#%# N 60 badanie kolonoskopii
+> 45 N N 36 oznaczenie stê¿enia glukozy we krwi na czczo
+> 45 R nadciœnienie têtnicze krwi#zaburzenia gospodarki lipidowej(podwy¿szone stê¿enie we krwi cholestreolu ca³kowitego, LDL-cholesterolu, triglicerydów i niskie stê¿enie HDL-cholesterolu)#palenie tytoniu#niska aktywnoœæ ruchowa#nadwaga i oty³oœæ#upoœledzona tolerancja glukozy#wzrost stê¿enia fibrynogenu#wzrost stê¿enia kwasu moczowego#nadmierny stres#nieracjonalne od¿ywianie#%# N 12 oznaczenie stê¿enia glukozy we krwi na czczo
+- 40 60 R palenie tytoniu#%# N 0 badanie spiriometryczne
+> 20 N N 12 morfologia
+> 20 N N 12 OB
+> 20 N N 12 ogólne badanie moczu
+- 20 30 N N 36 lipidogram
+> 30 N N 12 lipidogram
+> 40 N N 12 badanie na krew utajon¹ w kale
+m = 0 N N 0 porada patrona¿owa
+m = 8 N N 0 badanie bilans zdrowia
+m = 11 N N 0 badanie bilans zdrowia
+= 2 N N 0 badanie bilans zdrowia
+= 4 N N 0 badanie bilans zdrowia
+= 5 N N 0 badanie bilans zdrowia
+- 5 8 N E podstawowa I 0 badanie bilans zdrowia
+- 7 11 N E podstawowa III 0 badanie bilans zdrowia
+- 12 16 N E podstawowa VIII 0 badanie bilans zdrowia
+- 15 18 N E ponadpodstawowa I 0 badanie bilans zdrowia
+- 17 19 N E ponadpodstawowa IV 0 badanie bilans zdrowia
