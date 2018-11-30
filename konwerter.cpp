@@ -68,7 +68,7 @@ bool konwerter::wystepowanie_czynnikow_ryzyka(string ryzyko)
 	else if (ryzyko == "N")
 		return false;
 	else
-		cout << "Wyst¹pi³ b³¹d";
+		cout << "Wyst¹pi³ b³¹d czynnikó";
 	return false;
 }
 
@@ -79,7 +79,7 @@ bool konwerter::wystepowanie_etapu_szkolnego(string etap)
 	else if (etap == "N")
 		return false;
 	else
-		cout << "Wyst¹pi³ b³¹d";
+		cout << "Wyst¹pi³ b³¹d etapu";
 	return false;
 }
 
@@ -89,10 +89,10 @@ SZKOLA konwerter::jaka_szkola(string szkola)
 		return przedszkole;
 	else if (szkola == "podstawowa")
 		return podstawowa;
-	else if (szkola == "ponadpostawowa")
+	else if (szkola == "ponadpodstawowa")
 		return ponadpodstawowa;
 	else
-		cout << "Wyst¹pi³ b³¹d";
+		cout << "Wyst¹pi³ b³¹d szko³y";
 }
 
 KLASA konwerter::jaka_klasa(string klasa)
@@ -114,7 +114,7 @@ KLASA konwerter::jaka_klasa(string klasa)
 	else if (klasa == "VIII")
 		return VIII;
 	else
-		cout << "Wyst¹pi³ b³¹d";
+		cout << "Wyst¹pi³ b³¹d klasy";
 }
 
 string konwerter::jaka_szkola(SZKOLA szkola)
@@ -124,9 +124,9 @@ string konwerter::jaka_szkola(SZKOLA szkola)
 	else if (szkola == podstawowa)
 		return "podstawowa";
 	else if (szkola == ponadpodstawowa)
-		return "ponadpostawowa";
+		return "ponadpodstawowa";
 	else
-		cout << "Wyst¹pi³ b³¹d";
+		cout << "Wyst¹pi³ b³¹d szko³y";
 }
 string konwerter::jaka_klasa(KLASA klasa)
 {
@@ -147,7 +147,7 @@ string konwerter::jaka_klasa(KLASA klasa)
 	else if (klasa == VIII)
 		return "VIII";
 	else
-		cout << "Wyst¹pi³ b³¹d";
+		cout << "Wyst¹pi³ b³¹d klasa";
 }
 
 bool konwerter::czy_wiek_w_miesiacach(string znak)

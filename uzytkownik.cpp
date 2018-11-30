@@ -426,6 +426,9 @@ void uzytkownik::odsiew_ryzyko()
 void uzytkownik::odsiew_etap()
 {
 	vector<badanie*> po_odsiewie;
+	SZKOLA szkola;
+	KLASA klasa;
+	bool etap_tak = false;
 	if (odpowiedz_za_dziecko)
 	{
 		vector<badanie*>::iterator IT = badania.begin();
@@ -434,7 +437,16 @@ void uzytkownik::odsiew_etap()
 			bool etap = (*IT)->get_etap();
 			if (etap)
 			{
-				cout << "Czy Twojego dziecko znajduje siê na podanym etapie edukacji?" << endl;
+				if (etap_tak)
+				{
+					if ((*IT)->get_szkola() != przedszkole)
+					{
+						if (szkola == (*IT)->get_szkola() && klasa == (*IT)->get_klasa())
+							po_odsiewie.push_back(*IT);
+					}
+					continue;
+				}
+				cout << "Czy Twoje dziecko znajduje siê na podanym etapie edukacji?" << endl;
 				if ((*IT)->get_szkola() != przedszkole)
 				{
 					cout << "Szko³a " << Konwerter.jaka_szkola((*IT)->get_szkola()) << ", klasa " << Konwerter.jaka_klasa((*IT)->get_klasa()) << endl;
@@ -449,6 +461,9 @@ void uzytkownik::odsiew_etap()
 				int odpowiedz = pobierz_odpowiedz(1, 2);
 				if (odpowiedz == 1)
 				{
+					etap_tak = true;
+					szkola = (*IT)->get_szkola();
+					klasa = (*IT)->get_klasa();
 					po_odsiewie.push_back(*IT);
 				}
 			}
@@ -464,6 +479,12 @@ void uzytkownik::odsiew_etap()
 			bool etap = (*IT)->get_etap();
 			if (etap)
 			{
+				if (etap_tak)
+				{
+					if(szkola == (*IT)->get_szkola() && klasa == (*IT)->get_klasa())
+						po_odsiewie.push_back(*IT);
+					continue;
+				}
 				cout << "Czy znajdujesz siê na podanym etapie edukacji?" << endl;
 				if ((*IT)->get_szkola() != przedszkole)
 				{
@@ -474,6 +495,9 @@ void uzytkownik::odsiew_etap()
 				int odpowiedz = pobierz_odpowiedz(1, 2);
 				if (odpowiedz == 1)
 				{
+					etap_tak = true;
+					szkola = (*IT)->get_szkola();
+					klasa = (*IT)->get_klasa();
 					po_odsiewie.push_back(*IT);
 				}
 			}
