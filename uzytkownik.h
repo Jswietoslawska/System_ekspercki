@@ -10,14 +10,17 @@ public:
 	void odsiew_etap();
 	void odsiew_czas();
 	void proponowane_badania();
-	vector<badanie*> badania;
+	void set_plec(PLEC plec);
 private:
+	vector<badanie*> badania;
 	bool odpowiedz_za_dziecko;
 	int wiek_w_miesiacach;
-	vector<badanie*> wyszukaj_badania(int wiek, PLEC plec);
-	vector<badanie*> wyszukaj_badania(int wiek);
-	vector<badanie*> wyszukaj_badania();
+	PLEC plec;
+	vector<badanie*> wyszukaj_badania(int wiek, PLEC plec); //wyszukuje badania w pliku kobiety.txt lub mezczyzni.txt
+	vector<badanie*> wyszukaj_badania(int wiek); //wyszukuje badania w pliku wiek.txt
+	vector<badanie*> wyszukaj_badania(); //wyszukuje badania w pliku wszyscy.txt
 	konwerter Konwerter;
 	int pobierz_odpowiedz(int dolna_granica, int gorna_granica);
 	int pobierz_odpowiedz(int dolna_granica);
+	void usuniecie_powielonych_badan();
 };

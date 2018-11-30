@@ -7,5 +7,5 @@
 - 25 59 N N 36 badanie cytologiczne
 - 25 59 R zaka¿enie HIV#przyjmowanie leków immunosupresyjnych#zaka¿enie HPV typem wysokiego ryzyka#leczenie w przesz³oœci z powodu œródnab³onkowej neoplazji szyjki macicy (CIN 2, CIN 3) lub raka szyjki macicy#%# N 12 badanie cytologiczne
 > 50 N N 36 oznaczenie stê¿enia choresterolu
-- 12 15 R przebyta pierwsza menstruacja#%# N 0 pierwsza kontrolna wizyta u ginekologa
-- 16 22 R menstruacja nigdy siê nie pojawi³a#%# N 0 pierwsza kontrolna wizytka u ginekologa
+- 12 15 R przebyta pierwsza menstruacja#%# N 0 pierwsze badanie kontrolne u ginekologa
+- 16 22 R menstruacja nigdy siê nie pojawi³a#%# N 0 pierwsze badanie kontrolne u ginekologa

@@ -1,5 +1,5 @@
 R zaka¿enie WZW typu C#zaawansowana choroba nerek z filtracj¹ k³êbuszkow¹ poni¿ej 30ml/min#dializy#%# N 0 szczepienie przeciw WZW typu B
-N N 12 pomiar ciœnienia têtniczego
+N N 12 badanie pomiaru ciœnienia têtniczego
 N N 6 badanie kontrolne u stomatologa
 N N 12 badanie kontrolne u okulisty
-R choroby przewlek³e#%# N 12 wizyta kontrolna u specjalisty od choroby/ chorób przewlek³ych
+R choroby przewlek³e#%# N 12 badanie kontrolne u specjalisty od choroby/chorób przewlek³ych

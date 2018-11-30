@@ -6,7 +6,7 @@ m = 1 N N 0 szczepienie przeciw tê¿cowi
 m = 1 N N 0 szczepienie przeciw krztuœcowi
 m = 1 N N 0 szczepienie przeciw inwazyjnym zaka¿eniom haemophilus influenzae
 m = 1 N N 0 szczepienie przeciw inwazyjnym zaka¿eniom streptococcus pneumoniae
-m - 1 6 N N 0 badanie bilans zdrowia
+m - 1 6 N N 0 badanie bilansu zdrowia
 m = 3 N N 0 szczepienie przeciw b³onicy (druga dawka)
 m = 3 N N 0 szczepienie przeciw tê¿cowi (druga dawka)
 m = 3 N N 0 szczepienie przeciw krztuœcowi (druga dawka)
@@ -50,20 +50,20 @@ m - 15 17 N N 0 szczepienie przeciw ostremu nagminnemu pora¿eniu dzieciêcemu (tr
 > 45 N N 36 oznaczenie stê¿enia glukozy we krwi na czczo
 > 45 R nadciœnienie têtnicze krwi#zaburzenia gospodarki lipidowej(podwy¿szone stê¿enie we krwi cholestreolu ca³kowitego, LDL-cholesterolu, triglicerydów i niskie stê¿enie HDL-cholesterolu)#palenie tytoniu#niska aktywnoœæ ruchowa#nadwaga i oty³oœæ#upoœledzona tolerancja glukozy#wzrost stê¿enia fibrynogenu#wzrost stê¿enia kwasu moczowego#nadmierny stres#nieracjonalne od¿ywianie#%# N 12 oznaczenie stê¿enia glukozy we krwi na czczo
 - 40 60 R palenie tytoniu#%# N 0 badanie spiriometryczne
-> 20 N N 12 morfologia
+> 20 N N 12 badanie morfologii krwi
 > 20 N N 12 OB
 > 20 N N 12 ogólne badanie moczu
-- 20 30 N N 36 lipidogram
-> 30 N N 12 lipidogram
+- 20 30 N N 36 badanie lipidogramu
+> 30 N N 12 badanie lipidogramu
 > 40 N N 12 badanie na krew utajon¹ w kale
 m = 0 N N 0 porada patrona¿owa
-m = 8 N N 0 badanie bilans zdrowia
-m = 11 N N 0 badanie bilans zdrowia
-= 2 N N 0 badanie bilans zdrowia
-= 4 N N 0 badanie bilans zdrowia
-= 5 N N 0 badanie bilans zdrowia
-- 5 8 N E podstawowa I 0 badanie bilans zdrowia
-- 7 11 N E podstawowa III 0 badanie bilans zdrowia
-- 12 16 N E podstawowa VIII 0 badanie bilans zdrowia
-- 15 18 N E ponadpodstawowa I 0 badanie bilans zdrowia
-- 17 19 N E ponadpodstawowa IV 0 badanie bilans zdrowia
+m = 8 N N 2 badanie bilansu zdrowia
+m = 11 N N 2 badanie bilansu zdrowia
+= 2 N N 6 badanie bilansu zdrowia
+= 4 N N 12 badanie bilansu zdrowia
+= 5 N N 12 badanie bilansu zdrowia
+- 5 8 N E podstawowa I 12 badanie bilansu zdrowia
+- 7 11 N E podstawowa III 12 badanie bilansu zdrowia
+- 12 16 N E podstawowa VIII 12 badanie bilansu zdrowia
+- 15 18 N E ponadpodstawowa I 12 badanie bilansu zdrowia
+- 17 19 N E ponadpodstawowa IV 12 badanie bilansu zdrowia

@@ -304,25 +304,32 @@ void uzytkownik::pytania_ogolne()
 	odpowiedz_za_dziecko = (odpowiedz == 1 ? false : true);
 	switch (odpowiedz)
 	{
-	case 1: cout << endl << "Ile masz lat?" << endl;
+	case 1: cout << endl << "Ile masz skoñczonych lat?" << endl;
 		wiek = pobierz_odpowiedz(16);
 		cout << endl << "Jakiej jestes p³ci?" << endl;
 		cout << "1 - kobieta, 2 - mê¿czyzna" << endl;
 		plec = pobierz_odpowiedz(1, 2);
 		Plec = (plec == 1 ? kobieta : mezczyzna);
+		set_plec(Plec);
 		break;
-	case 2: cout << endl << "Ile dziecko ma lat?" << endl;
+	case 2: cout << endl << "Ile dziecko ma skoñczonych lat?" << endl;
 		wiek = pobierz_odpowiedz(0, 15);
 		wiek_w_miesiacach = -1;
-		if (wiek <= 2)
+		if (wiek < 1)
 		{
-			cout << endl << "Podaj ile miesiêcy ma dziecko." << endl;
-			wiek_w_miesiacach = pobierz_odpowiedz(0, 24);
+			cout << endl << "Podaj ile skoñczonych miesiêcy ma dziecko." << endl;
+			wiek_w_miesiacach = pobierz_odpowiedz(0, 11);
+		}
+		else if (wiek >= 1 && wiek < 2)
+		{
+			cout << endl << "Podaj ile skoñczonych miesiêcy ma dziecko." << endl;
+			wiek_w_miesiacach = pobierz_odpowiedz(12, 23);
 		}
 		cout << endl << "Jakiej dziecko jest p³ci?" << endl;
 		cout << "1 - dziewczynka, 2 - ch³opiec" << endl;
 		plec = pobierz_odpowiedz(1, 2);
 		Plec = (plec == 1 ? kobieta : mezczyzna);
+		set_plec(Plec);
 		break;
 	}
 	vector<badanie*> badania_plec = wyszukaj_badania(wiek, Plec);
@@ -481,6 +488,7 @@ void uzytkownik::odsiew_etap()
 
 void uzytkownik::odsiew_czas()
 {
+	usuniecie_powielonych_badan();
 	vector<badanie*> po_odsiewie;
 	if (odpowiedz_za_dziecko)
 	{
@@ -490,8 +498,14 @@ void uzytkownik::odsiew_czas()
 			int czas = (*IT)->co_ile_wykonywac();
 			if (czas)
 			{
-				cout << "Czy w ci¹gu ostatnich " << (*IT)->co_ile_wykonywac() << " miesiêcy" << endl;
+				if(czas == 1)
+					cout << "Czy w ci¹gu ostatniego miesi¹ca" << endl;
+				else if (czas >= 24)
+					cout << "Czy w ci¹gu ostatnich " << ((*IT)->co_ile_wykonywac())/12 << " lat" << endl;
+				else
+					cout << "Czy w ci¹gu ostatnich " << (*IT)->co_ile_wykonywac() << " miesiêcy" << endl;
 				cout << "Twoje dziecko mia³o wykonane " << (*IT)->get_nazwa() << "?" << endl;
+				cout << "Jeœli nie pamiêtasz zaznacz \"nie\"." << endl;
 				cout << "1 - tak, 2 - nie" << endl;
 				int odpowiedz = pobierz_odpowiedz(1, 2);
 				if (odpowiedz == 2)
@@ -502,6 +516,7 @@ void uzytkownik::odsiew_czas()
 			else
 			{
 				cout << "Czy Twoje dziecko mia³o wykonane " << (*IT)->get_nazwa() << "?" << endl;
+				cout << "Jeœli nie pamiêtasz zaznacz \"nie\"." << endl;
 				cout << "1 - tak, 2 - nie" << endl;
 				int odpowiedz = pobierz_odpowiedz(1, 2);
 				if (odpowiedz == 2)
@@ -519,8 +534,21 @@ void uzytkownik::odsiew_czas()
 			int czas = (*IT)->co_ile_wykonywac();
 			if (czas)
 			{
-				cout << "Czy w ci¹gu ostatnich " << (*IT)->co_ile_wykonywac() << " miesiêcy" << endl;
-				cout << "mia³eœ wykonywane " << (*IT)->get_nazwa() << "?" << endl;
+				if (czas == 1)
+					cout << "Czy w ci¹gu ostatniego miesi¹ca" << endl;
+				else if (czas >= 24)
+					cout << "Czy w ci¹gu ostatnich " << ((*IT)->co_ile_wykonywac())/12 << " lat" << endl;
+				else
+					cout << "Czy w ci¹gu ostatnich " << (*IT)->co_ile_wykonywac() << " miesiêcy" << endl;
+				if (plec == kobieta)
+				{
+					cout << "mia³aœ wykonywane " << (*IT)->get_nazwa() << "?" << endl;
+				}
+				else
+				{
+					cout << "mia³eœ wykonywane " << (*IT)->get_nazwa() << "?" << endl;
+				}
+				cout << "Jeœli nie pamiêtasz zaznacz \"nie\"." << endl;
 				cout << "1 - tak, 2 - nie" << endl;
 				int odpowiedz = pobierz_odpowiedz(1, 2);
 				if (odpowiedz == 2)
@@ -530,7 +558,15 @@ void uzytkownik::odsiew_czas()
 			}
 			else
 			{
-				cout << "Czy mia³eœ wykonane " << (*IT)->get_nazwa() << "?" << endl;
+				if (plec == kobieta)
+				{
+					cout << "Czy mia³aœ wykonane " << (*IT)->get_nazwa() << "?" << endl;
+				}
+				else
+				{
+					cout << "Czy mia³eœ wykonane " << (*IT)->get_nazwa() << "?" << endl;
+				}
+				cout << "Jeœli nie pamiêtasz zaznacz \"nie\"." << endl;
 				cout << "1 - tak, 2 - nie" << endl;
 				int odpowiedz = pobierz_odpowiedz(1, 2);
 				if (odpowiedz == 2)
@@ -561,6 +597,7 @@ void uzytkownik::proponowane_badania()
 			{
 				cout << i + 1 << ". " << (*IT)->get_nazwa() << endl;
 			}
+			cout << "Pamiêtaj, ¿e przed ka¿dym szczepieniem obowi¹zkowa jest konsultacja z lekarzem." << endl;
 		}
 		else
 		{
@@ -569,6 +606,48 @@ void uzytkownik::proponowane_badania()
 			{
 				cout << i + 1 << ". " << (*IT)->get_nazwa() << endl;
 			}
+			cout << "Pamiêtaj, ¿e przed ka¿dym szczepieniem obowi¹zkowa jest konsultacja z lekarzem." << endl;
 		}
 	}
+}
+
+void uzytkownik::set_plec(PLEC Plec)
+{
+	plec = Plec;
+}
+
+void uzytkownik::usuniecie_powielonych_badan()
+{
+	vector<badanie*> po_odsiewie;
+	vector<badanie*>::iterator IT = badania.begin();
+	vector<badanie*>::iterator it = badania.begin();
+	bool powielone = false;
+	bool dodaj_powielone = false;
+	for (int i = 0; IT != badania.end(); IT++, i++)
+	{
+		int j;
+		for (j = 0, it = badania.begin(); it != badania.end(); it++, j++)
+		{
+			if (j!=i&&(*IT)->get_nazwa() == (*it)->get_nazwa())
+			{
+				powielone = true;
+				if ((*IT)->co_ile_wykonywac() < (*it)->co_ile_wykonywac())
+				{
+					dodaj_powielone = true;
+				}
+				else
+				{
+					dodaj_powielone = false;
+				}
+			}
+		}
+		if (powielone == false || (powielone == true && dodaj_powielone == true))
+		{
+			po_odsiewie.push_back(*IT);
+		}
+		powielone = false;
+	}
+	badania.clear();
+	for (vector<badanie*>::iterator it2 = po_odsiewie.begin(); it2 != po_odsiewie.end(); it2++)
+		badania.push_back(*it2);
 }
